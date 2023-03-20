@@ -15,7 +15,7 @@ export default function DefenseBuilding({ json, images, image = undefined, image
                 <motion.div
                     whileHover={{scale: 1.2}}
                     whileTap={{scale: 0.9}}
-                    className='w-16 h-16 text-5xl bg-gradient-to-br from-yellow-300 to-yellow-500 text-gray-800 rounded-lg p-2 ml-6'
+                    className='w-16 h-16 text-5xl bg-gradient-to-br from-yellow-300 to-yellow-500 text-gray-800 rounded-lg p-2 ml-6 animate-card-enter'
                 >
                     <AiOutlineHome />
                 </motion.div>
@@ -25,7 +25,7 @@ export default function DefenseBuilding({ json, images, image = undefined, image
                     <motion.button
                         whileHover={{ scale: 1.2 }}
                         whileTap={{ scale: 0.9 }}
-                        className='outline-none text-4xl w-14 h-14 bg-gradient-to-tr from-blue-500 to-blue-600 rounded-xl grid place-items-center'
+                        className='outline-none text-4xl w-14 h-14 bg-gradient-to-tr from-blue-500 to-blue-600 rounded-xl grid place-items-center animate-card-enter'
                         onClick={() => {
                             if (level > 1) {
                                 setLevel(level - 1);
@@ -33,8 +33,8 @@ export default function DefenseBuilding({ json, images, image = undefined, image
                         }}
                     ><HiMinusSm /></motion.button>
                     <motion.div
-                        className='bg-gradient-to-br from-gray-800 to-gray-900 rounded-3xl w-32 h-32 xl:w-72 xl:h-72 grid place-items-center'
-                        whileHover={{ scale: 1.2 }}
+                        className='bg-gradient-to-br from-gray-800 to-gray-900 rounded-3xl w-32 h-32 xl:w-72 xl:h-72 grid place-items-center animate-card-enter'
+                        whileHover={{ scale: 1.1 }}
                         whileTap={{ scale: 0.9 }}
                     >
                         <img
@@ -57,7 +57,7 @@ export default function DefenseBuilding({ json, images, image = undefined, image
                     <motion.button
                         whileHover={{ scale: 1.2 }}
                         whileTap={{ scale: 0.9 }}
-                        className='outline-none text-4xl w-14 h-14 bg-gradient-to-tr from-orange-500 to-orange-600 rounded-xl grid place-items-center'
+                        className='outline-none text-4xl w-14 h-14 bg-gradient-to-tr from-orange-500 to-orange-600 rounded-xl grid place-items-center animate-card-enter'
                         onClick={() => {
                             if (level < pageJson.length) {
                                 setLevel(level + 1);
@@ -69,7 +69,7 @@ export default function DefenseBuilding({ json, images, image = undefined, image
                     {Object.keys(pageJson[1]).map(element => {
                         return (
                             <div className='w-24 h-40 flex-col'>
-                                <div className=' my-2 w-24 h-24 bg-gradient-to-br from-gray-800 to-gray-900 rounded-xl grid place-items-center text-white text-3xl'>
+                                <div className=' my-2 w-24 h-24 bg-gradient-to-br from-gray-800 to-gray-900 rounded-xl grid place-items-center text-white text-3xl animate-card-enter'>
 
                                     {element === "Unlocks" ?
                                         <img src={images[`${pageJson[level - 1][element].toLowerCase()}.webp`]} />

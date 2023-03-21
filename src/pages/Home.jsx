@@ -7,15 +7,6 @@ export default function Home() {
     const buildingImage = importImages(require.context('../images/top', false, /\.webp$/));
     const [searchBuilding, setSearchBuilding] = useState([]);
     const [searchTerm, setSearchTerm] = useState("");
-    const [searching, setSearching] = useState(false);
-
-    function importAll(r) {
-        let images = {};
-        r.keys().map(item => {
-            images[item.replace(/.\/|.json/g, '')] = r(item);
-        });
-        return Object.keys(images);
-    }
 
     function importImages(r) {
         let images = {};
@@ -69,7 +60,6 @@ export default function Home() {
     function blurTimeout() {
         setTimeout(() => {
             setSearchBuilding([]);
-            setSearching(false);
         }, 150)
     }
 
@@ -82,12 +72,10 @@ export default function Home() {
                         required=""
                         type="text"
                         onChange={(e) => {
-                            setSearchTerm(e.target.value);
-                            console.log(searchBuilding);
+                            setSearchTerm(e.target.value.toLowerCase());
                         }}
                         onFocus={() => {
                             setSearchBuilding(Object.keys(buildingJson));
-                            setSearching(true);
                         }}
                         onBlur={() => {
                             blurTimeout();
@@ -103,7 +91,7 @@ export default function Home() {
                 </form>
             </div>
             {
-                searching ?
+                searchTerm.length > 0 ?
                     <SearchCards /> :
                     <DefaultCards />
             }

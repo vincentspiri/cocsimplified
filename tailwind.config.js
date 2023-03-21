@@ -9,7 +9,7 @@ module.exports = {
         'fifty': '50% 50%',
       },
       animation: {
-        "card-enter": "enter 600ms ease",
+        "card-enter": "enter 400ms ease",
       },
       keyframes: {
         enter: {

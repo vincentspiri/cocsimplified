@@ -43,7 +43,7 @@ export default function DefenseBuilding({ json, images, image = undefined, image
                                     image === undefined ?
                                         images[`${imageprefix + level}.webp`] :
                                         image}
-                            className='cursor-pointer w-full rounded-3xl'
+                            className='cursor-pointer w-full rounded-3xl p-2'
                             onClick={() => {
                                 if (page < pagenum) {
                                     setPage(page + 1);

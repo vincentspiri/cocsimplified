@@ -9,10 +9,12 @@ import darkspellfactoryimg from '../../images/army/dark-spell-factory/dark5.webp
 import workshopimg from '../../images/army/workshop/workshop7.webp';
 import pethouseimg from '../../images/army/pet-house/pet8.webp';
 import Card from '../../components/Card';
+import HomeButton from '../../components/HomeButton';
 
 export default function Army() {
     return (
-        <div className="h-screen grid place-items-center grid-flow-row grid-cols-2 gap-5 xl:grid-cols-8 xl:p-32 lg:grid-cols-4 lg:p-5 md:grid-cols-4 py-12">
+        <div className="h-screen grid place-items-center grid-flow-row grid-cols-2 gap-5 xl:grid-cols-8 xl:p-32 lg:grid-cols-4 lg:p-5 md:grid-cols-4 py-28">
+            <HomeButton/>
             <Link to="/army/army-camp">
                 <Card image={armycampimg} />
             </Link>

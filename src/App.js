@@ -172,7 +172,7 @@ function App() {
             <Route path='dragon' element={<DefenseBuilding json={[troopJson['dragon.json']]} image={elixertroopsimg['dragon.webp']} />} />
             <Route path='pekka' element={<DefenseBuilding json={[troopJson['pekka.json']]} image={elixertroopsimg['pekka.webp']} />} />
             <Route path='baby-dragon' element={<DefenseBuilding json={[troopJson['baby-dragon.json']]} image={elixertroopsimg['baby-dragon.webp']} />} />
-            <Route path='miner' element={<DefenseBuilding json={[troopJson['miner.json']]} image={elixertroopsimg['miner.webp']} />} />
+            <Route path='miner' element={<DefenseBuilding json={[troopJson['miner.json']]} image={elixertroopsimg['bottle.webp']} />} />
             <Route path='electro-dragon' element={<DefenseBuilding json={[troopJson['electro-dragon.json']]} image={elixertroopsimg['electro-dragon.webp']} />} />
             <Route path='yeti' element={<DefenseBuilding json={[troopJson['yeti.json']]} image={elixertroopsimg['yeti.webp']} />} />
             <Route path='dragon-rider' element={<DefenseBuilding json={[troopJson['dragon-rider.json']]} image={elixertroopsimg['dragon-rider.webp']} />} />

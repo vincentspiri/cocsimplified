@@ -2,19 +2,18 @@ import { useState } from 'react';
 import { motion } from 'framer-motion';
 import { HiMinusSm, HiPlusSm } from 'react-icons/hi';
 import { AiOutlineHome } from 'react-icons/ai';
-import { Link, useNavigate } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
 export default function DefenseBuilding({ json, images, image = undefined, imageprefix, pagenum = 1 }) {
     const [page, setPage] = useState(1);
     let pageJson = json[page - 1];
     const [level, setLevel] = useState(pageJson.length);
-    const navigate = useNavigate();
     return (
         <div className='bg-gradient-to-br from-purple-600 to-purple-900 bg-fixed h-screen py-6 overflow-x-hidden'>
             <Link to='/'>
                 <motion.div
-                    whileHover={{scale: 1.2}}
-                    whileTap={{scale: 0.9}}
+                    whileHover={{ scale: 1.2 }}
+                    whileTap={{ scale: 0.9 }}
                     className='w-16 h-16 text-5xl bg-gradient-to-br from-yellow-300 to-yellow-500 text-gray-800 rounded-lg p-2 ml-6 animate-card-enter'
                 >
                     <AiOutlineHome />
@@ -70,9 +69,10 @@ export default function DefenseBuilding({ json, images, image = undefined, image
                         return (
                             <div className='w-24 h-40 flex-col'>
                                 <div className=' my-2 w-24 h-24 bg-gradient-to-br from-gray-800 to-gray-900 rounded-xl grid place-items-center text-white text-3xl animate-card-enter'>
-
                                     {element === "Unlocks" ?
-                                        <img src={images[`${pageJson[level - 1][element].toLowerCase()}.webp`]} />
+                                        pageJson[level - 1][element].toString().toLowerCase() === "miner" ?
+                                        <img src={images["bottle.webp"]}/> : 
+                                        <img src={images[`${pageJson[level - 1][element].toString().toLowerCase()}.webp`]} />
                                         :
                                         element === "Level" ?
                                             <span contentEditable onBlur={e => {

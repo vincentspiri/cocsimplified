@@ -8,10 +8,12 @@ import seekingairmineimg from '../../images/defenses/traps/seeking-air-mine/bomb
 import skeletontrapimg from '../../images/defenses/traps/skeleton-trap/skeleton4.webp';
 import tornadotrapimg from '../../images/defenses/traps/tornado-trap/tornado3.webp';
 import Card from '../../components/Card';
+import HomeButton from '../../components/HomeButton';
 
 export default function Traps() {
     return (
-        <div className="h-screen grid place-items-center grid-flow-row grid-cols-2 gap-5 xl:grid-cols-7 xl:p-32 lg:grid-cols-4 lg:p-5 md:grid-cols-4 py-12">
+        <div className="h-screen grid place-items-center grid-flow-row grid-cols-2 gap-5 xl:grid-cols-7 xl:p-32 lg:grid-cols-4 lg:p-5 md:grid-cols-4 py-28">
+            <HomeButton/>
             <Link to="/defenses/traps/bomb">
                 <Card image={bombimg} />
             </Link>

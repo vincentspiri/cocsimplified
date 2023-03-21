@@ -9,10 +9,12 @@ import diggyimg from '../../images/troops/pets/diggy.webp';
 import poisonlizardimg from '../../images/troops/pets/poison-lizard.webp';
 import phoeniximg from '../../images/troops/pets/phoenix.webp';
 import Card from "../../components/Card";
+import HomeButton from "../../components/HomeButton";
 
 export default function Pets() {
     return (
-        <div className="h-screen grid place-items-center grid-flow-row grid-cols-2 gap-5 xl:grid-cols-4 xl:p-32 lg:grid-cols-4 lg:p-5 md:grid-cols-4 py-12">
+        <div className="h-screen grid place-items-center grid-flow-row grid-cols-2 gap-5 xl:grid-cols-4 xl:p-32 lg:grid-cols-4 lg:p-5 md:grid-cols-4 py-28">
+            <HomeButton/>
             <Link to="/troops/pets/lassi">
                 <Card image={lassiimg}/>
             </Link>

@@ -8,10 +8,12 @@ import loglauncherimg from '../../images/troops/siege-machines/log-launcher.webp
 import flakeflingerimg from '../../images/troops/siege-machines/flame-flinger.webp';
 import battledrillimg from '../../images/troops/siege-machines/battle-drill.webp';
 import Card from "../../components/Card";
+import HomeButton from "../../components/HomeButton";
 
 export default function SiegeMachines() {
     return (
-        <div className="h-screen grid place-items-center grid-flow-row grid-cols-2 gap-5 xl:grid-cols-7 xl:p-32 lg:grid-cols-4 lg:p-5 md:grid-cols-4 py-12">
+        <div className="h-screen grid place-items-center grid-flow-row grid-cols-2 gap-5 xl:grid-cols-7 xl:p-32 lg:grid-cols-4 lg:p-5 md:grid-cols-4 py-28">
+            <HomeButton/>
             <Link to="/troops/siege-machines/wall-wrecker">
                 <Card image={wallwreckerimg}/>
             </Link>

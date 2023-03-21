@@ -9,10 +9,12 @@ import poisonspellimg from '../../images/troops/dark-elixer-spells/poison.webp';
 import wallwreckerimg from '../../images/troops/siege-machines/wall-wrecker.webp';
 import superbarbarianimg from '../../images/troops/super-troops/barbarian.webp';
 import Card from '../../components/Card';
+import HomeButton from '../../components/HomeButton';
 
 export default function Troops() {
     return (
-        <div className="h-screen grid place-items-center grid-flow-row grid-cols-2 gap-5 xl:grid-cols-4 xl:p-32 lg:grid-cols-4 lg:p-5 md:grid-cols-4 py-12">
+        <div className="h-screen grid place-items-center grid-flow-row grid-cols-2 gap-5 xl:grid-cols-4 xl:p-32 lg:grid-cols-4 lg:p-5 md:grid-cols-4 py-28">
+            <HomeButton/>
             <Link to="/troops/elixer-troops">
                 <Card image={barbarianimg} />
             </Link>

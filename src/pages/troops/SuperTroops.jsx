@@ -16,10 +16,12 @@ import witchimg from '../../images/troops/super-troops/witch.webp';
 import icehoundimg from '../../images/troops/super-troops/ice-hound.webp';
 import bowlerimg from '../../images/troops/super-troops/bowler.webp';
 import Card from "../../components/Card";
+import HomeButton from "../../components/HomeButton";
 
 export default function SuperTroops() {
     return (
-        <div className="h-screen grid place-items-center grid-flow-row grid-cols-2 gap-5 xl:grid-cols-5 xl:p-32 lg:grid-cols-5 lg:p-5 md:grid-cols-3 py-12">
+        <div className="h-screen grid place-items-center grid-flow-row grid-cols-2 gap-5 xl:grid-cols-5 xl:p-32 lg:grid-cols-5 lg:p-5 md:grid-cols-3 py-28">
+            <HomeButton/>
             <Link to="/troops/super-troops/super-barbarian">
                 <Card image={barbarianimg}/>
             </Link>

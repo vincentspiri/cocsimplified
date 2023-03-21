@@ -5,6 +5,9 @@ module.exports = {
   ],
   theme: {
     extend: {
+      transformOrigin: {
+        'fifty': '50% 50%',
+      },
       animation: {
         "card-enter": "enter 600ms ease",
       },
@@ -14,7 +17,7 @@ module.exports = {
           "100%": { opacity: 1, transform: 'scale(1)' },
         },
       }
-    }
+    },
   },
   plugins: [],
 }

@@ -11,17 +11,19 @@ import healerimg from '../../images/troops/elixer-troops/healer.webp';
 import dragonimg from '../../images/troops/elixer-troops/dragon.webp';
 import pekkaimg from '../../images/troops/elixer-troops/pekka.webp';
 import babydragonimg from '../../images/troops/elixer-troops/baby-dragon.webp';
-import minerimg from '../../images/troops/elixer-troops/miner.webp';
+import minerimg from '../../images/top/bottle.webp';
 import electrodragonimg from '../../images/troops/elixer-troops/electro-dragon.webp';
 import yetiimg from '../../images/troops/elixer-troops/yeti.webp';
 import dragonriderimg from '../../images/troops/elixer-troops/dragon-rider.webp';
 import electrotitanimg from '../../images/troops/elixer-troops/electro-titan.webp';
 
 import Card from '../../components/Card';
+import HomeButton from '../../components/HomeButton';
 
 export default function ElixerTroops() {
     return (
-        <div className="h-screen grid place-items-center grid-flow-row grid-cols-2 gap-5 xl:grid-cols-4 xl:px-32 lg:grid-cols-4 lg:p-5 md:grid-cols-4 py-12">
+        <div className="h-screen grid place-items-center grid-flow-row grid-cols-2 gap-5 xl:grid-cols-4 xl:px-32 lg:grid-cols-4 lg:p-5 md:grid-cols-4 py-28">
+            <HomeButton/>
             <Link to="/troops/elixer-troops/barbarian">
                 <Card image={barbarianimg}/>
             </Link>

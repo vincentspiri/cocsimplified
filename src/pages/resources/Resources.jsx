@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 
+
 import townhallimg from '../../images/resources/town-hall/th15.webp';
 import goldmineimg from '../../images/resources/gold-mine/mine15.webp';
 import goldstorageimg from '../../images/resources/gold-storage/gold16.webp';
@@ -9,10 +10,12 @@ import darkelixerdrillimg from '../../images/resources/dark-elixer-drill/dark9.w
 import darkelixerstorageimg from '../../images/resources/dark-elixer-storage/dark10.webp';
 import clancastleimg from '../../images/resources/clan-castle/clan11.webp';
 import Card from "../../components/Card";
+import HomeButton from "../../components/HomeButton";
 
 export default function Resources() {
     return (
-        <div className="h-screen grid place-items-center grid-flow-row grid-cols-2 gap-5 xl:grid-cols-8 lg:grid-cols-4 lg:p-5 md:grid-cols-4 py-12">
+        <div className="h-screen grid place-items-center grid-flow-row grid-cols-2 gap-5 xl:grid-cols-8 lg:grid-cols-4 lg:p-5 md:grid-cols-4 py-28">
+            <HomeButton/>
             <Link to="/resources/town-hall">
                 <Card image={townhallimg}/>
             </Link>

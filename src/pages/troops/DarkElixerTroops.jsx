@@ -10,10 +10,12 @@ import bowlerimg from '../../images/troops/dark-elixer-troops/bowler.webp';
 import icegolemimg from '../../images/troops/dark-elixer-troops/ice-golem.webp';
 import headhunterimg from '../../images/troops/dark-elixer-troops/headhunter.webp';
 import Card from '../../components/Card';
+import HomeButton from '../../components/HomeButton';
 
 export default function DarkElixerTroops() {
     return (
-        <div className="h-screen grid place-items-center grid-flow-row grid-cols-2 gap-5 xl:grid-cols-3 xl:p-32 lg:grid-cols-3 lg:p-5 md:grid-cols-3 py-12">
+        <div className="h-screen grid place-items-center grid-flow-row grid-cols-2 gap-5 xl:grid-cols-3 xl:p-32 lg:grid-cols-3 lg:p-5 md:grid-cols-3 py-28">
+            <HomeButton/>
             <Link to="/troops/dark-elixer-troops/minion">
                 <Card image={minionimg}/>
             </Link>

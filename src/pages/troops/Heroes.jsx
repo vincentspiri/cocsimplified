@@ -5,10 +5,12 @@ import archerqueenimg from '../../images/troops/heroes/archer-queen.webp';
 import grandwardenimg from '../../images/troops/heroes/grand-warden.webp';
 import royalchampionimg from '../../images/troops/heroes/royal-champion.webp';
 import Card from "../../components/Card";
+import HomeButton from "../../components/HomeButton";
 
 export default function Heroes() {
     return (
         <div className="h-screen flex justify-center items-center gap-12 flex-wrap py-12">
+            <HomeButton/>
             <Link to="/troops/heroes/barbarian-king">
                 <Card image={barbariankingimg}/>
             </Link>

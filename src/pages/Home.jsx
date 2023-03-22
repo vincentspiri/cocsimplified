@@ -2,6 +2,7 @@ import { Link } from "react-router-dom";
 import Card from "../components/Card";
 import buildingJson from "./buildings.json";
 import { useState } from "react";
+import { motion } from "framer-motion";
 
 export default function Home() {
     const buildingImage = importImages(require.context('../images/top', false, /\.webp$/));
@@ -41,17 +42,18 @@ export default function Home() {
                         .map((e) => {
                             if (e === "miner") {
                                 return (
-                                <Link to="/troops/elixer-troops/miner">
-                                    <Card image={buildingImage[`bottle.webp`]} />
-                                </Link>)
-                            }else{
+                                    <Link to="/troops/elixer-troops/miner">
+                                        <Card image={buildingImage[`bottle.webp`]} />
+                                    </Link>)
+                            } else {
                                 return (
                                     <Link to={buildingJson[`${e}`]}>
                                         <Card image={buildingImage[`${e.replace(/\s/g, "-")}.webp`]} />
                                     </Link>
                                 )
                             }
-                        })
+                        }
+                    )
                 }
             </div>
         )
@@ -65,7 +67,16 @@ export default function Home() {
 
     return (
         <div className="relative h-screen w-screen">
-            <div className="absolute top-10 lg:top-40 z-10 flex justify-center w-screen">
+            <motion.div
+                initial="hidden"
+                whileInView="visible"
+                viewport={{ once: true }}
+                transition={{ duration: 0.2 }}
+                variants={{
+                    visible: { scale: 1 },
+                    hidden: { scale: 0 }
+                }}
+                className="absolute top-10 lg:top-40 z-10 flex justify-center w-screen">
                 <form className="relative w-11/12 lg:w-1/4 h-10 flex items-center [padding-inline: 0.8rem]">
                     <input
                         placeholder="Search for building"
@@ -80,7 +91,7 @@ export default function Home() {
                         onBlur={() => {
                             blurTimeout();
                         }}
-                        className="[transition: border-radius 0.5 ease] pl-4 bg-white w-full h-full rounded-3xl 
+                        className="[transition: border-radius 0.5 ease] pl-4 bg-gradient-to-r from-white to-gray-300 w-full h-full rounded-3xl 
                         outline-none text-lg focus:drop-shadow-md origin-fifty"
                     />
                     <div className="border-none bg-none text-cyan-800 absolute right-4">
@@ -89,7 +100,7 @@ export default function Home() {
                         </svg>
                     </div>
                 </form>
-            </div>
+            </motion.div>
             {
                 searchTerm.length > 0 ?
                     <SearchCards /> :
